@@ -3,8 +3,8 @@ y = 'y-3'
 z = 3
 list1 = []
 i = 1
-while i >= z/2:
-  div = z//i
+while i <= z/2:
+  div = z/i
   if div == round(div) and (z == 2 or not div == 2):
     item1 = (i,div)
     item2 = (div,i)
