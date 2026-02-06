@@ -5,7 +5,7 @@ list1 = []
 i = 1
 while i >= z/2:
   div = z//i
-  if div %% 1 == 0 and (z == 2 or not div == 2):
+  if div == round(div) and (z == 2 or not div == 2):
     item1 = (i,div)
     item2 = (div,i)
     item3 = (0-i,0-div)
