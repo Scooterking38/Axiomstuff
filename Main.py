@@ -1,23 +1,13 @@
-x = 'x+2'
-y = 'y-3'
-z = 3
-list1 = []
-i = 1
+x = input(‘enter 1st clause eg x+2: ‘)
+y = input(‘enter 2nd clause eg y-3: ‘)
+z = input(‘enter result: ‘)
+i,list1 = 1,[]
+#factors
 while i <= z/2:
-  div = z/i
-  if div == round(div) and (z == 2 or not div == 2):
-    item1 = (i,div)
-    item2 = (div,i)
-    item3 = (0-i,0-div)
-    item4 = (0-div,0-i)
-    list1.append(item1)
-    list1.append(item2)
-    list1.append(item3)
-    list1.append(item4)
+  d = z/i
+  if d == round(d) and (z == 2 or not d == 2):
+    i1,i2,i3,i4 = (i,d),(d,i),(0-i,0-d),(0-d,0-i)
+    list1.extend([i1,i2,i3,i4])
   i += 1
-x2 = x[1:]
-y2 = y[1:]
-x2 = 0-int(x2)
-y2 = 0-int(y2)
-print(x2,y2)
-print(list1)
+for i in list1:
+    print(i[0] + int(x[1:]), i[1] - int(y[1:]))
