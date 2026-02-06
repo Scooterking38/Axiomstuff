@@ -1,6 +1,6 @@
 x = input('enter 1st clause eg x+2: ')
 y = input('enter 2nd clause eg y-3: ')
-z = input('enter result: ')
+z = int(input('enter result: '))
 i,list1 = 1,[]
 #factors
 while i <= z/2:
