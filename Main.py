@@ -11,9 +11,8 @@ while i >= z/2:
     list1.append((0-i,0-div))
     list1.append((0-div,0-i))
   i += 1
-x2 = x
-y2 = y
-del x2[0]
-del y2[0]
+x2 = x[1:]
+y2 = y[1:]
 x2 = 0-int(x2)
 y2 = 0-int(y2)
+print(x2,y2)
