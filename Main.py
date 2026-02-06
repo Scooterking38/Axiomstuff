@@ -6,10 +6,10 @@ i = 1
 while i >= z/2:
   div = z//i
   if div %% 1 == 0 and (z == 2 or not div == 2):
-    list1.append((i,div))
-    list1.append((div,i))
-    list1.append((0-i,0-div))
-    list1.append((0-div,0-i))
+    item1 = (i,div)
+    item2 = (div,i)
+    item3 = (0-i,0-div)
+    item4 = (0-div,0-i)
   i += 1
 x2 = x[1:]
 y2 = y[1:]
