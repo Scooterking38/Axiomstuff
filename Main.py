@@ -20,3 +20,4 @@ y2 = y[1:]
 x2 = 0-int(x2)
 y2 = 0-int(y2)
 print(x2,y2)
+print(list1)
