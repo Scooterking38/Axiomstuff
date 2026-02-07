@@ -1,26 +1,23 @@
 x = input('enter 1st clause eg x+2: ')
 y = input('enter 2nd clause eg y-3: ')
 z = int(input('enter result: '))
-i,list1 = 1,[]
+i, list1 = 1, []
 
-if '+' in x:
-  test = x.split('+')
-  var1 = test[0]
-  num1 = '-'.join(test[1])
-elif '-' in x:
-  test2 = x.split('-')
-  var2 = test2[0]
-  num2 = test2[1]
-  
+if '+' in x: var1, num1 = x.split('+')
+elif '-' in x: var1, num1 = x.split('-')
+    num1 = '-' + num1
+if '+' in y: var2, num2 = y.split('+')
+elif '-' in y: var2, num2 = y.split('-')
+    num2 = '-' + num2
 
+# factors
+while i <= abs(z):
+    if z % i == 0:
+        d = z // i
+        list1.extend([(i, d),
+                      (-i, -d)])
+    i += 1
 
-
-#factors
-while i <= z//2:
-  d = z//i
-  if d % i == 0 and (z == 2 or not d == 2):
-    i1,i2,i3,i4 = (i,d),(d,i),(0-i,0-d),(0-d,0-i)
-    list1.extend([i1,i2,i3,i4])
-  i += 1
-for i in list1:
-    print(var1+': '+(i[0] + int(num1)), var2+': '+(i[1] + int(num2))
+#output
+for a, b in list1:
+    print(var1 + ': ' + str(a + int(num1)), var2 + ': ' + str(b + int(num2)))
